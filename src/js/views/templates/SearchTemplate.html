@@ -1,0 +1,10 @@
+<% _.each(queryResults,function(value,key){ %>
+<div class="search__result">
+  <div class="container--search-results">
+    <div class="search__city container__item--vertical-direction"><%= value.address.city_name %></div>
+    <div class="search__country container__item--vertical-direction">//<%= value.address.country %></div>
+  </div>
+  <input type="checkbox" id="<%=value.place_id %>" class="search__checkbox search__checkbox--queryResults">
+  <label for="<%=value.place_id %>" class="search__city-check"></label>
+</div>
+<% }) %>

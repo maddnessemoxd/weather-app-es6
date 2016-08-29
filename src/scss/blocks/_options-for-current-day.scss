@@ -1,0 +1,36 @@
+.options-for-current-day {
+  padding-top: 36px;
+  border-top: 3px solid $border-color;
+
+    &__item-holder {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 24%;
+      text-align: center;
+    }
+
+    &__option-icon{
+      padding-bottom: 30px;
+      display: block;
+      font-size: 4.375em;
+    }
+
+    &__value {
+      padding-bottom: 20px;
+      margin: 0;
+      font-size: 2.500em;
+      letter-spacing: 0;
+    }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    & {
+      padding-top: 12px;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    & {
+      border-top: none;
+    }
+  }
+}

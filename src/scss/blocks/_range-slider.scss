@@ -1,0 +1,25 @@
+.rangeslider {
+  background: #081322;
+  &--horizontal {
+    height: 4px;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  &__handle {
+    top: -10px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__handle:after {
+    background-color: #081322;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__fill {
+    background: #ff4200;
+  }
+}

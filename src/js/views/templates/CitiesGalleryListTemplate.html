@@ -1,0 +1,61 @@
+<% _.each(forecast,function(value,key){ %>
+<div class="swiper-slide">
+  <div class="container--main-info-holder">
+    <div class="main-info">
+      <span class="main-info__time"><%=value.time%></span>
+      <i class="main-info__icon-refresh icon-refresh"></i>
+      <h1 class="main-info__city-name"><%=(value.city_name).toUpperCase()%></h1>
+      <span class="main-info__current-date main-info__day"><%=value.current_day%>,</span>
+      <span class="main-info__current-date main-info__mouth"><%=value.current_month%></span>
+      <span class="main-info__current-date main-info__date"><%=value.current_date%></span>
+      <div class="container--main-info">
+        <i class="main-info__main-weather-icon icon-<%=value.current_icon%>"></i>
+        <div class="container">
+          <span class="container__item-vertical-direction--current-weather main-info__degree"><%=value.current_temperature[options]%>&deg;</span>
+          <span class="container__item-vertical-direction--current-weather main-info__weather-status">// <%=(value.current_summary).toUpperCase()%></span>
+        </div>
+        <div class="container">
+          <i class="container__item-vertical-direction--moon main-info__moon-phase icon-<%=value.moon_phase%>"></i>
+          <span class="container__item-vertical-direction--moon main-info__moonrise-time"><%=value.sunset_time%></span>
+        </div>
+      </div>
+    </div>
+    <div class="container--accurate-forecast">
+      <div class="overview-for-day">
+        <div class="swiper-container-overview container--overview-for-day">
+          <div class="swiper-wrapper overview-for-day-container">
+
+          </div>
+          <div class="swiper-scrollbar overview-for-day__scroll-bar"></div>
+        </div>
+      </div>
+      <div class="container--options-for-current-day">
+        <div class="options-for-current-day">
+          <div class="options-for-current-day__item-holder">
+            <i class="icon-humidity options-for-current-day__option-icon"></i>
+            <p class="options-for-current-day__value"><%=value.humidity%>%</p>
+          </div>
+          <div class="options-for-current-day__item-holder">
+            <i class="icon-wind-direction options-for-current-day__option-icon"></i>
+            <p class="options-for-current-day__value"><%=value.windspeed%><sup>m/c</sup>
+            </p>
+          </div>
+          <div class="options-for-current-day__item-holder">
+            <i class="icon-sunrise options-for-current-day__option-icon"></i>
+            <p class="options-for-current-day__value sunrise"><%=value.sunrise_time%></p>
+          </div>
+          <div class="options-for-current-day__item-holder">
+            <i class="icon-sunset options-for-current-day__option-icon"></i>
+            <p class="options-for-current-day__value sunset"><%=value.sunset_time%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container--temperature-for-week">
+      <div class="temperature-for-week">
+
+      </div>
+    </div>
+  </div>
+</div>
+<% }) %>

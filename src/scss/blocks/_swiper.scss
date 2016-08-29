@@ -1,0 +1,45 @@
+.swiper {
+  &-wrapper {
+    height: 100%;
+  }
+  &-pagination-main {
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0);
+  }
+  &-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+    margin: 0 3px;
+  }
+  &-pagination-bullet-active {
+    background-color: $page-font-color;
+  }
+
+  @media only screen and (min-width: 768px) {
+    &-pagination-main {
+      margin: 45px 0;
+    }
+
+    &-pagination-bullet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    &-pagination-main {
+      margin-top: -13px;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    &-pagination-main {
+      margin: 14px auto 0;
+      width: 60%;
+    }
+  }
+}

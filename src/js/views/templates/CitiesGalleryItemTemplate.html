@@ -1,0 +1,7 @@
+<% _.each(forecast,function(value,key){ %>
+<div class="swiper-slide overview-for-day__slide-item">
+  <p class="overview-for-day__hour"><%=value.time%></p>
+  <i class="overview-for-day__weather-icon-for-hour icon-<%=value.icon%>"></i>
+  <p class="overview-for-day__degrees"><%=value.temperature[options]%>&deg;</p>
+</div>
+<%})%>

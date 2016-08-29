@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="dist/bundle.css">
+</head>
+<body class="page">
+
+<div class="sun__viewport">
+  <div class="sun__holder"></div>
+</div>
+<input type="checkbox" id="main-btn-checkbox" class="menu-button__checkbox">
+<label for="main-btn-checkbox" class="menu-button icon-menu"></label>
+<aside class="sidebar">
+  <div class="sidebar-section sidebar-section--search search">
+    <input type="text" class="search__search-field hide act">
+    <div class="search__add-city search__add-button">
+      <!--<i class="icon-add"></i>-->
+    </div>
+    <div class="search__delete-city search__delete-button">
+      <!--<i class="icon-delete"></i>-->
+    </div>
+  </div>
+  <div class="sidebar-section sidebar-section--cities-list cities-list">
+    <div class="search__results-container hide">
+      <p class="search__no-results-field">No results</p>
+
+    </div>
+    <div class="scroll-container">
+
+    </div>
+  </div>
+    </div>
+  <div class="sidebar-section sidebar-section--settings settings">
+    <div class="container container--degrees-convection">
+      <input type="radio" checked name="grade" id="celsius" class="settings__radio">
+      <label for="celsius" class="settings__btn-degree settings__celsius-radio">C&deg;</label>
+      <input type="radio" name="grade" id="fahrenheit" class="settings__radio">
+      <label for="fahrenheit" class="settings__btn-degree settings__fahrenheit-radio">F&deg;</label>
+      <i class="settings__icon-settings icon-settings"></i>
+    </div>
+    <div class="container container--options-border">
+      <div class="container container--options-days">
+        <span class="settings__title">SHOW WEATHER FOR</span>
+        <span class="settings__title settings__title--full-color settings__title--right" id="days">7 days</span>
+        <input type="range" min="1" max="7" step="1" value="7" class="rangeslider range-slide-days" data-rangeslider>
+      </div>
+    </div>
+    <div class="container container--options-minutes">
+      <span class="settings__title">UPDATE WEATHER EVERY</span>
+      <span class="settings__title settings__title--full-color settings__title--right" id="minutes">15 min</span>
+      <input type="range" min="15" max="60" step="15" value="15" class="range-slide-update" data-rangeslider>
+    </div>
+  </div>
+</aside>
+<div class="main-wrapper weather-animation">
+  <!-- Swiper -->
+  <div class="swiper-container swiper-container-main">
+    <div class="swiper-wrapper citiesGalleryView">
+
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="swiper-pagination swiper-pagination-main"></div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKPgRUqUgU-D4pftITQI1Xkj6j-feX22o&language=en&signed_in=true&libraries=places"></script>
+<script src="dist/bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<% _.each(forecast,function(value,key){ %>
+<div class="temperature-for-week__element">
+  <span class="temperature-for-week__day"><%=value.day.toUpperCase()%></span>
+  <i class="temperature-for-week__weather-icon icon-<%=value.icon%>"></i>
+  <div class="temperature-for-week__range-holder">
+    <div class="temperature-for-week__ranger">
+      <span class="temperature-for-week__temperature-min"><%=value.temperatureMin[options]%>&deg;</span>
+      <span class="temperature-for-week__temperature-max"><%=value.temperatureMax[options]%>&deg;</span>
+    </div>
+  </div>
+</div>
+<%})%>

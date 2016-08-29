@@ -1,0 +1,187 @@
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid $sidebar-border-color;
+
+    &__check:before,
+    &__check--delete-city:before,
+    &__check--add-city:before{
+      content: '\e926';
+      font-family: 'icomoon';
+    }
+
+    &__check,
+    &__check--delete-city,
+    &__check--add-city{
+      font-size: 1.4em;
+      cursor: pointer;
+      margin: 0 3%;
+    }
+
+    &__checkbox {
+      display: none;
+    }
+
+    &__add-city,
+    &__add-city--checked{
+      margin: 0 3%;
+      font-size: 2em;
+      cursor: pointer;
+      font-family:'icomoon';
+    }
+
+    &__add-city:before,
+    &__add-city--checked:before{
+      content: "\e900";
+    }
+
+    &__delete-city:before {
+      content: "\e905";
+    }
+
+    &__add-city--checked,
+    &__delete-city--checked{
+      color: #ff4200;
+    }
+
+    &__delete-city {
+      margin: 0 3%;
+      font-size: 2em;
+      font-family:'icomoon';
+    }
+
+    &__search-field {
+      display: inline-block;
+      padding: 0 5px;
+      margin: 0 2%;
+      width: 60%;
+      height: 2em;
+      font: 1.5em 'pt_sans_narrowregular', sans-serif;
+      background-color: $search__search-field-bg-color;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+    }
+
+    &__results-container {
+      display: block;
+      height: 100%;
+    }
+
+    &__result {
+      margin: 0;
+      display: flex;
+      padding: 1% 0;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 2px solid $sidebar-border-color;
+    }
+
+    &__city {
+      margin: 0 4%;
+      font-size: 1.875em;
+    }
+
+    &__country {
+      margin: 0 4%;
+      font-size: 1.250em;
+      color: #fff;
+      opacity: .5;
+    }
+
+    &__city-check {
+      margin:0 4% 0 auto;
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      cursor: pointer;
+    }
+
+    &__checkbox {
+      display: none;
+
+      &:checked ~ .search__city-check:before {
+        content: '\e926';
+        font: 1.5em "icomoon";
+        color: #ff4200;
+      }
+    }
+
+    &__no-results-field {
+      font-size: 1.5em;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.351);
+    }
+
+  #add-city-checkbox:checked ~ .search__search-field {
+    display: inline-block;
+  }
+
+  #add-city-checkbox:checked ~ .search__add-city .icon-add {
+    color: #ff4200;
+  }
+
+  @media only screen and (min-width: 320px) {
+    &__search-field {
+      width: 66%;
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    &__search-field {
+      width: 51%;
+      font-size: 1.5em;
+    }
+
+    &__result {
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__search-field {
+      width: 57%;
+    }
+
+    &__result {
+      font-size: 1.1em;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    &__search-field {
+      width: 62%;
+      font-size: 1.6em;
+    }
+  }
+
+  @media only screen and (min-width: 1025px){
+    &__search-field {
+      width: 62%;
+      font-size: 1.8em;
+    }
+
+    &__result {
+      font-size: 1.5em;
+    }
+
+    &__checkbox {
+      &:checked ~ .search__city-check:before {
+        content: '\e926';
+        font: 1em "icomoon";
+        color: #ff4200;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1140px) {
+    &__search-field {
+      width: 68%;
+      font-size: 1.8em;
+    }
+  }
+
+
+}

@@ -1,0 +1,24 @@
+.sidebar {
+  position: fixed;
+  overflow: hidden;
+  right: -100%;
+  float: right;
+  height: 100%;
+  width: 100%;
+  background-color: $sidebar-bg-color;
+  z-index: 99;
+  transition: all .4s ease;
+
+  @media only screen and (min-width: 768px) {
+    & {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    & {
+      width: 36%;
+    }
+  }
+
+}

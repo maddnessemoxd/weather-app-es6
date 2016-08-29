@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+}
+
+.hide {
+  display: none !important;
+  opacity: 0;
+}
+
+.page {
+  margin: 0;
+  height: 100%;
+  position: relative;
+  font: $page-font;
+  background-color: $page-background-default;
+  color: $page-font-color;
+
+  @media only screen and (min-width: 320px) {
+    font-size: .7em;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: .8em;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    font-size: .6em;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    font-size: .8em;
+  }
+
+}
+

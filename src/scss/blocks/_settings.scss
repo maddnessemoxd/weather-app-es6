@@ -1,0 +1,39 @@
+.settings {
+  font-size: 2em;
+  background-color: $settings-bg-color;
+  &__radio {
+    display: none;
+  }
+  &__icon-settings {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+
+  &__btn-degree {
+    margin: 0 2%;
+    color: rgba(255,255,255, .25);
+    cursor: pointer;
+  }
+
+  &__celsius-radio {
+    padding-right: 3%;
+    border-right: 1px solid rgba(255,255,255, .25);
+  }
+
+  &__title {
+    font-size: 1em;
+    color: $border-color;
+    &--full-color {
+      color: $page-font-color;
+    }
+    &--right {
+      float: right;
+    }
+  }
+}
+
+#celsius:checked ~ .settings__celsius-radio,
+#fahrenheit:checked ~ .settings__fahrenheit-radio{
+  color: #fff;;
+  border-color: rgba(255,255,255, .25);
+}

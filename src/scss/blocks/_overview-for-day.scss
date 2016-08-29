@@ -1,0 +1,65 @@
+.overview-for-day {
+  position: relative;
+  padding: 17px 0;
+  border-top: 3px solid $border-color;
+  overflow: hidden;
+
+  &__slide-item {
+    box-sizing: border-box;
+    display: block;
+    width: 24%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__hour {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1.250em;
+    letter-spacing: .2em;
+  }
+
+  &__weather-icon-for-hour {
+    margin: 0;
+    display: block;
+    padding-bottom: 30px;
+    font-size: 4.375em;
+  }
+
+  &__degrees {
+    margin: 0;
+    padding-bottom: 9px;
+    font-size: 2.500em;
+    letter-spacing: 0;
+  }
+
+  &__scroll-bar > .swiper-scrollbar-drag {
+    background-color: #fff;
+  }
+
+  &__scroll-bar {
+    display: none;
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    & {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    & {
+      border-top: 3px solid $border-color;
+      padding: 10px 0;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    &__scroll-bar {
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,86 @@
+.cities-list {
+  &__slide {
+    margin: 0;
+    display: flex;
+    padding: 4% 0;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid $sidebar-border-color;
+    cursor: pointer;
+  }
+
+  &__main-weather-icon {
+    margin: 0 4%;
+    font-size: 4.375em;
+    color: $border-color;
+    flex-basis: 18%;
+  }
+
+  &__degrees {
+    margin: 0 4%;
+    font-size: 3.750em;
+  }
+
+  &__place-name {
+    margin: 0 4%;
+    font-size: 1.875em;
+  }
+
+  &__place-weather {
+    margin: 0 4%;
+    font-size: 1.250em;
+    color: #fff;
+    opacity: .5;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .cities-list__city-check:before {
+      content: '\e926';
+      font: 1.5em "icomoon";
+      color: #ff4200;
+    }
+  }
+
+  &__city-check {
+    margin:0 4% 0 auto;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 320px) {
+    &__main-weather-icon {
+      flex-basis: 11%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__main-weather-icon {
+      flex-basis: 18%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__main-weather-icon {
+      flex-basis: 14%;
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    &__main-weather-icon {
+      flex-basis: 13%;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    &__main-weather-icon {
+      flex-basis: 13%;
+    }
+  }
+
+
+}

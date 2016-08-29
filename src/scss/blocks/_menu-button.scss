@@ -1,0 +1,76 @@
+.menu-button {
+  font-size: 2.500em;
+  position: absolute;
+  z-index: 100;
+  top: 5%;
+  left: 85%;
+  transition: all .4s ease;
+  cursor: pointer;
+
+  &__checkbox {
+    display: none;
+      &:checked ~ .menu-button {
+        left: 2%;
+        position: fixed;
+      }
+
+      &:checked ~ .sidebar {
+        right: 0;
+      }
+
+    &:checked ~ .weather-animation {
+      position: fixed;
+      left: 5%;
+    }
+  }
+
+  &__span {
+    margin: 6px auto;
+    width: 80%;
+    height: 5px;
+    background-color: $menu-button-bg-color;
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    & {
+      left: 88%;
+    }
+    &__checkbox {
+      &:checked ~ .weather-animation {
+        position: fixed;
+        left: 5%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    & {
+      top: 3%;
+      left: 90%;
+    }
+
+    &__checkbox {
+      &:checked ~ .menu-button {
+        left: 52%;
+      }
+      &:checked ~ .weather-animation {
+        position: static;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    & {
+      top: 3%;
+      left: 95%;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    &__checkbox {
+      &:checked ~ .menu-button {
+        left: 65%;
+      }
+    }
+  }
+}

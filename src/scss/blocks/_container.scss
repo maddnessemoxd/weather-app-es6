@@ -1,0 +1,147 @@
+.container {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &--main-info-holder {
+    padding: 9% 0 0;
+  }
+
+  &--main-info {
+    padding: 1.688em 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: stretch;
+  }
+
+  &--degrees-convection {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    float: right;
+    width: 95%;
+    clear: both;
+    border-bottom: 2px solid $sidebar-border-color;
+  }
+
+  &--options-days {
+    padding: 3% 0 0;
+    clear: both;
+    width: 95%;
+  }
+
+  &--options-minutes {
+    padding: 3% 0 0;
+    clear: both;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  &--options-border {
+    clear: both;
+    width: 95%;
+    float: right;
+    border-bottom: 2px solid $border-color;
+  }
+
+  &--search-results {
+    width: 50%;
+  }
+
+  &__item-vertical-direction {
+    height: 50%;
+    float: left;
+    clear: both;
+    &--current-weather {
+      height: auto;
+      @extend .container__item-vertical-direction;
+    }
+    &--moon {
+      @extend .container__item-vertical-direction;
+      height: auto;
+      &:first-child {
+        margin-top:.3em;
+      }
+      &:last-child {
+        margin-top: 1.9em;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    &--accurate-forecast {
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      clear: right;
+    }
+
+    &--temperature-for-week {
+      clear: both;
+    }
+
+    &--degrees-convection {
+      padding: 15px 0 10px;
+      height: 8%;
+      align-items: center;
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    &--options-border {
+      padding-top: 5%;
+    }
+
+    &--options-minutes {
+      padding-top: 5%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &--main-info-holder {
+      margin-top: 65px;
+    }
+
+    &--options-border {
+      padding: 5% 0;
+    }
+
+    &--options-minutes {
+      padding: 5% 0;
+    }
+
+    &--accurate-forecast {
+      width: 50%;
+      box-sizing: border-box;
+      float: left;
+      clear: left;
+    }
+
+    &--temperature-for-week {
+      width: 48%;
+      float: right;
+      position: absolute;
+      right: 0;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    &--main-info-holder {
+      margin-top: -65px;
+    }
+    &--options-border {
+      padding: 2% 0;
+    }
+    &--options-minutes {
+      padding: 5% 0;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    &--main-info-holder {
+      margin-top: -55px;
+    }
+  }
+}

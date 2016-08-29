@@ -1,0 +1,14 @@
+<%var i = 0%>
+<% _.each(forecast,function(value,key){ %>
+<div class="swiper-slide cities-list__slide" data-index =<%=i%> >
+  <i class="cities-list__main-weather-icon icon-<%=value.current_icon%>"></i>
+  <span class="cities-list__degrees"><%= value.current_temperature[options] %>&deg;</span>
+  <div class="container">
+    <div class="cities-list__place-name container__item--vertical-direction"><%=value.city_name%></div>
+    <div class="cities-list__place-weather container__item--vertical-direction">//<%=value.current_summary%></div>
+  </div>
+  <input type="checkbox" id="<%=value.place_id%>" class="cities-list__checkbox">
+  <label for="<%=value.place_id%>" class="cities-list__city-check hide"></label>
+</div>
+<% i++ %>
+<% }) %>

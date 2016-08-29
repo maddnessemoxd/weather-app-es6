@@ -1,0 +1,65 @@
+.main-info {
+  display:block;
+  &__time {
+    font-size: 1.875em;
+    letter-spacing: 0;
+  }
+
+  &__icon-refresh {
+    margin:0 2%;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  &__city-name {
+    width: 100%;
+    font-size: 4.688em;
+    letter-spacing: .2em;
+    margin: 0.4em 0;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__current-date {
+    font-size: 2.3em;
+    letter-spacing: .2em;
+  }
+
+  &__main-weather-icon {
+    font-size: 8.625em;
+  }
+
+  &__degree {
+    font-size: 6.250em;
+  }
+
+  &__weather-status {
+    font-size: 1.250em;
+  }
+
+  &__moon-phase {
+    font-size: 3em;
+  }
+
+  &__moonrise-time {
+    font-size: 1.875em;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    & {
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+    }
+  }
+
+  @media only screen and (min-width: 768px){
+    & {
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+    }
+  }
+}
